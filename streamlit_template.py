@@ -1,10 +1,13 @@
-# -*- coding: utf-8 -*-
-import streamlit as st 
-import pandas as pd 
+import streamlit as st
+import matplotlib.pyplot as plt
+import numpy as np
 
 def main():
-    st.title("여기에서부터 시작")
+    arr = np.random.normal(1, 1, size=100)
+    fig, ax = plt.subplots()
+    ax.hist(arr, bins=20)
 
+    st.pyplot(fig)
 
 if __name__ == "__main__":
     main()
